@@ -1,6 +1,6 @@
 ## Svelte Native Drag + Drop
 
-Simple lightweight utlity for handling drag and drop events with W3C API Drag + Drop → [**DEMO**](https://svelte.dev/repl/3be30493605847549ec15ec252030771?version=3.31.2)
+Simple lightweight utility for handling drag and drop events with W3C API Drag + Drop → [**DEMO**](https://svelte.dev/repl/3be30493605847549ec15ec252030771?version=3.31.2)
 
 <p align="center">
 	<a href="https://svelte.dev/repl/3be30493605847549ec15ec252030771?version=3.31.2"><img title="svelte-native-drag-drop" src="screen.png" /></a>
@@ -38,6 +38,10 @@ There are two core functions: binding to **drag** areas, binding to **drop** are
 	onMount( async () => {
 		dragdrop.addDragArea( 'shared-group', handleEl, dragEl )
 		dragdrop.addDropArea( 'shared-group', dropEl )
+	})
+
+	onDestroy( async () => {
+		dragdrop.clear('shared-group')
 	})
 
 	let dropEl, dragEl, handleEl
@@ -80,6 +84,10 @@ Callbacks can be passed to the `addDropArea` function:
 
 		dragdrop.addDragArea( 'shared-group', handleEl, dragEl )
 		dragdrop.addDropArea( 'shared-group', dropEl, callbacks )
+	})
+	
+	onDestroy( async () => {
+		dragdrop.clear('shared-group')
 	})
 
 	let dropEl, dragEl, handleEl

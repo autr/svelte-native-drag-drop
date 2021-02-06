@@ -87,7 +87,10 @@ function dragdrop() {
 
 		try {
 			update( d => { 
-				for (const [handle, element] of Object.entries(d[group].handles)) {
+
+				if (!d[group]) return d
+					
+				for (const [handle, element] of Object.entries( d[group].handles)) {
 					handle.removeEventListener( 'mousedown', enable )
 					element.removeEventListener( 'dragend', disable )
 					element.removeEventListener( 'mouseup', disable )

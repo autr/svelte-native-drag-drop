@@ -15,7 +15,9 @@ function dragdrop() {
 			return d
 		})
 	}
-	const reject = e => console.error('[draggable] ❌  no group ID provided...')
+	const reject = e => {
+		// console.warn('[draggable] no group id provided')
+	}
 
 	const dropHandlers = {
 		dragover: (e) => {

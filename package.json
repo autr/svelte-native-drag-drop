@@ -1,6 +1,6 @@
 {
   "name": "svelte-native-drag-drop",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Lightweight utility for Drag + Drop API w/ Svelte JS",
   "main": "index.js",
   "repository": {

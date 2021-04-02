@@ -76,7 +76,6 @@ function dragdrop() {
 	}
 	
 	const disable = (e) => {
-		console.log("DISABLE")
 		const group = e.target.getAttribute('data-group')
 		if (!group) return reject()
 		update( d => {
@@ -88,7 +87,6 @@ function dragdrop() {
 	}
 
 	const enable = (e) => {
-		console.log("ENABLE")
 		const group = e.target.getAttribute('data-group')
 		if (!group) return reject()
 		let element
@@ -166,4 +164,4 @@ function dragdrop() {
 	}
 }
 
-export default dragdrop();
+export default dragdrop()

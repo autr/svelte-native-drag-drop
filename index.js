@@ -7,7 +7,7 @@ function dragdrop() {
 
 	function findAncestor (el, attr) {
 	    while ((el = el.parentElement) && !el.getAttribute( attr ));
-	    return el;
+	    return el
 	}
 	function check( group ) {
 		update( d => {
@@ -22,6 +22,7 @@ function dragdrop() {
 	const dropHandlers = {
 		dragover: (e) => {
 			const el = findAncestor(e.target, 'data-group')
+			if (!el) return reject()
 			const group = el.getAttribute('data-group')
 			if (!group) return reject()
 			e.preventDefault()
@@ -35,6 +36,7 @@ function dragdrop() {
 		},
 		dragleave: (e) => {
 			const el = findAncestor(e.target, 'data-group')
+			if (!el) return reject()
 			const group = el.getAttribute('data-group')
 			if (!group) return reject()
 			e.preventDefault()
@@ -48,6 +50,7 @@ function dragdrop() {
 		},
 		drop: (e, t) => {
 			const el = findAncestor(e.target, 'data-group')
+			if (!el) return reject()
 			const group = el.getAttribute('data-group')
 			if (!group) return reject()
 			e.preventDefault()
@@ -109,7 +112,6 @@ function dragdrop() {
 		element.addEventListener('mouseup', disable)
 		element.setAttribute('data-group', group)
 		handle.setAttribute( 'data-group', group)
-		handle.setAttribute( 'data-element', element)
 		handle.addEventListener('mousedown', enable)
 		
 		update( d => { d[group].handles.set( handle, element ); return d })

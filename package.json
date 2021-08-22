@@ -4,6 +4,7 @@
   "description": "Lightweight utility for Drag + Drop API w/ Svelte JS",
   "author": "G.Sinnott",
   "license": "MIT",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/autr/svelte-native-drag-drop/issues"
   },

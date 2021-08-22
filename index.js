@@ -110,9 +110,9 @@ function dragdrop() {
 		check(group)
 		element.addEventListener('dragend', disable)
 		element.addEventListener('mouseup', disable)
+		handle.addEventListener('mousedown', enable)
 		element.setAttribute('data-group', group)
 		handle.setAttribute( 'data-group', group)
-		handle.addEventListener('mousedown', enable)
 		
 		update( d => { d[group].handles.set( handle, element ); return d })
 	}

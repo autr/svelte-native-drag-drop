@@ -2,13 +2,16 @@
   "name": "svelte-native-drag-drop",
   "version": "1.0.5",
   "description": "Lightweight utility for Drag + Drop API w/ Svelte JS",
+  "svelte": "index.js",
+  "module": "index.js",
+  "main": "index.js",
+  "type": "module",
   "author": "G.Sinnott",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/autr/svelte-native-drag-drop/issues"
   },
   "homepage": "https://github.com/autr/svelte-native-drag-drop#readme",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/autr/svelte-native-drag-drop.git"
@@ -16,5 +19,8 @@
   "keywords": [
     "sveltejs",
     "dragdrop"
-  ]
+  ],
+  "devDependencies": {
+    "svelte": "^3.42.1"
+  }
 }

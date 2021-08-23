@@ -1,9 +1,9 @@
-import { writable } from 'svelte/store';
+import { writable } from 'svelte/store'
 
 
 function dragdrop() {
 
-	const { subscribe, set, update } = writable({});
+	const { subscribe, set, update } = writable({})
 
 	function findAncestor (el, attr) {
 	    while ((el = el.parentElement) && !el.getAttribute( attr ));

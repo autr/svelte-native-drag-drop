@@ -8,6 +8,7 @@
   "type": "module",
   "author": "G.Sinnott",
   "license": "MIT",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/autr/svelte-native-drag-drop/issues"
   },

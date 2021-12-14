@@ -108,9 +108,12 @@ function dragdrop() {
 		
 		if (!group) return reject()
 		check(group)
+
+		handle.addEventListener('mousedown', enable)
+		handle.addEventListener( 'dragstart', enable )
 		element.addEventListener('dragend', disable)
 		element.addEventListener('mouseup', disable)
-		handle.addEventListener('mousedown', enable)
+
 		element.setAttribute('data-group', group)
 		handle.setAttribute( 'data-group', group)
 		
@@ -139,6 +142,7 @@ function dragdrop() {
 
 				for (const [handle, element] of Object.entries( d[group].handles)) {
 					handle.removeEventListener( 'mousedown', enable )
+					handle.removeEventListener( 'dragstart', enable )
 					element.removeEventListener( 'dragend', disable )
 					element.removeEventListener( 'mouseup', disable )
 				}
